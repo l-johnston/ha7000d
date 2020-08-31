@@ -69,7 +69,8 @@ class HA7000DBase:
 
     def reset(self):
         """Reset to factory default"""
-        return self._write("*RST")
+        self._write("*RST")
+        return self._read()
 
 
 class Subsystem(HA7000DBase):
