@@ -3,8 +3,9 @@ import socket
 from unyt import matplotlib_support, define_unit
 from ha7000d.common import get_idn
 from ha7000d.ha7062d import HA7062D
+from ha7000d.version import __version__
 
-__all__ = ["CommChannel"]
+__all__ = ["CommChannel", "__version__"]
 
 define_unit("dBm", (1.0, "dB"))
 define_unit("dBc", (1.0, "dB"))

@@ -143,10 +143,10 @@ class HA7062D(HA7000DBase):
         # n_points = int(self._query(":SENS:PN:SWE:POIN?"))
         resp = self._query(":CALC:PN:DATA:XDAT?")
         x = list(map(float, resp.split(",")))
-        x = unyt_array(x, "Hz")
+        x = unyt_array(x, "Hz", name=r"$f_{\rm offset}$")
         resp = self._query(":CALC:PN:DATA:FDAT?")
         y = list(map(float, resp.split(",")))
-        y = unyt_array(y, "dBc/Hz")
+        y = unyt_array(y, "dBc/Hz", name=r"$\mathcal{L}$")
         return (x, y)
 
     def measure_input(self, channel):
