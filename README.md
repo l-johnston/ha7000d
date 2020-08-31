@@ -1,3 +1,4 @@
+![Build Status](https://github.com/l-johnston/ha7000d/workflows/publish/badge.svg)
 # `ha7000d`
 Python interface to the Holzworth HA7000D series Phase Noise Analyzer
 
